@@ -78,7 +78,7 @@ import {OrbitControls} from './orbitControls/OrbitControls.js'
 
 		const grid = new THREE.GridHelper(100, 100);
 	
-		const geometry = new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 2.3, 32 );
+		const geometry = new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 2.7, 32 );
 		
 		const materialOne = new THREE.MeshMatcapMaterial({specular:0xFFFFFF,shininess: 30 });
 		
@@ -91,15 +91,15 @@ import {OrbitControls} from './orbitControls/OrbitControls.js'
 
 		materialOne.matcap = matcapTextureone;
 
-		const secondGeometry = new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 1.5, 32 );
+		const secondGeometry = new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 1.75, 32 );
 
 		const meshTwo = new THREE.Mesh( secondGeometry, eyeMaterial );
 
-		const secondEyeBall = new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 2.2, 32 );
+		const secondEyeBall = new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 2.6, 32 );
 
 		const meshThree = new THREE.Mesh( secondEyeBall, materialOne );
 
-		const thirdGeometry = new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 1.5, 32 );
+		const thirdGeometry = new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 1.8, 32 );
 
 		const meshFour = new THREE.Mesh( thirdGeometry, eyeMaterial );
 
@@ -124,18 +124,19 @@ import {OrbitControls} from './orbitControls/OrbitControls.js'
 
 	// animation
 
-	mesh.position.y = 0;
+	mesh.position.y = 4;
 	mesh.position.x = -6;
-	mesh.position.z= -5;
 
-	meshTwo.position.x= -5.5;
-	meshTwo.position.y= 1;
-	meshTwo.position.z= -6;
+	meshTwo.position.x= -5;
+	meshTwo.position.y= 4.6;
+	meshTwo.position.z= -0.7;
+
 
 	meshThree.position.x= 4;
+	meshThree.position.y= 3.5;
 
 	meshFour.position.x= 4.5;
-	meshFour.position.y= 0.8;
+	meshFour.position.y= 4;
 	meshFour.position.z= -0.8;
 
 
